@@ -6,6 +6,8 @@
 html, body{
     width: 100vw;
     overflow-x: hidden;
+    ms-overflow-style: none;  
+  scrollbar-width: none;
 }
 .firstpage{
     background-color: #20232C;
@@ -30,9 +32,54 @@ header ul li{
     list-style:none ;
     padding: 5px 11px;
     border-radius: 10px;
+    font-family: "Roboto", sans-serif;
     /* margin-top: 10px; */
 }
+.menu{
+    position: fixed;
+    right: 40px;
+    top: 30px;
+    /* cursor: pointer; */
+    /* pointer-events: auto; */
+    z-index: 10;
+    display: none;
+}
+.menu i{
+    color: white;
+    cursor: pointer;
 
+}
+.slider{
+    width: 50vw;
+    height: 240px;
+    background-color: rgba(1, 0, 0, 0.484);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    right: 0;
+    z-index: 11;
+    padding: 10px;
+    color: white;
+    transform: translateX(100%);
+}
+.slider ul li {
+    list-style: none;
+    margin-top: 15px;
+    font-size: 20px;
+    margin-left: 5%;
+    font-family: "Roboto", sans-serif;
+}
+.slider .cross{
+    width: 20px;
+    height: 20px;
+    background-color:white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 90%;
+    cursor: pointer;
+}
 .left_intro h1{
     font-family: "Poppins", sans-serif;
     font-size: 55px;
@@ -115,6 +162,10 @@ header ul li:hover{
     height: 400px;
     margin-left: -25px;
 }
+.secondpage{
+    height: 1000px;
+    width: 100vw;
+}
 @media only screen and (max-width:1260px){
     .firstpage{
         height: auto;
@@ -167,9 +218,17 @@ header ul li:hover{
         
         display:none;
     }
+    .menu{
+        display: block;
+    }
+    /* .slider{
+        display: block;
+        
+    } */
  .introduction{
+
     margin-top: 0px;
-    padding-top: 20px;
+    padding-top: 65px;
  } 
  .left_intro{
     width: 80%;
